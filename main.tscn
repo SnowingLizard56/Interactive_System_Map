@@ -1,13 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://c07wxatt7u7ox"]
+[gd_scene load_steps=4 format=3 uid="uid://c07wxatt7u7ox"]
 
+[ext_resource type="PackedScene" uid="uid://dxdw4pnbl7wyu" path="res://ui.tscn" id="1_e2m42"]
 [ext_resource type="Script" path="res://camera.gd" id="1_yh7bo"]
 [ext_resource type="Texture2D" uid="uid://d0gcgr3nnmg2g" path="res://icon.svg" id="2_gmlhk"]
 
 [node name="Main" type="Node2D"]
 
+[node name="HUD" parent="." instance=ExtResource("1_e2m42")]
+
 [node name="Camera" type="Camera2D" parent="."]
+zoom = Vector2(0.1, 0.1)
 script = ExtResource("1_yh7bo")
 speed = 500
+zoom_speed = 1.0
 
 [node name="Icon" type="Sprite2D" parent="."]
 position = Vector2(70, 26)
